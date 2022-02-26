@@ -1,7 +1,7 @@
 package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
-import jpabook.jpashop.domain.MemberRepository;
+import jpabook.jpashop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ public class MemberRepositoryTest {
     public void testMember(){
         Member member = new Member();
         member.setUsername("memberA");
-        Long saveId = memberRepository.save(member);
+//        saveId = memberRepository.save(member);
 
         Member findMember = memberRepository.find(saveId);
 
